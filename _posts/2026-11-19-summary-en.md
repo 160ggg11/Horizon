@@ -5,287 +5,305 @@ date: 2026-11-19
 lang: en
 ---
 
-> From 43 items, 12 important content pieces were selected
+> From 45 items, 13 important content pieces were selected
 
 ---
 
 **Technology News**
-1. [Google releases Gemini 4 Neon with 1M-token context](#item-tech-news-1) ⭐️ 9.0/10
-2. [Wiz reports unauthenticated RCE flaws in Nginx HTTP/2](#item-tech-news-2) ⭐️ 8.0/10
-3. [Xint discloses nginx-to-root chain of five flaws](#item-tech-news-3) ⭐️ 8.0/10
-4. [Quad9’s France exit shows DNS blocking is the wrong anti-piracy tool](#item-tech-news-4) ⭐️ 7.0/10
-5. [Microsoft announces seven AI models pitched at scalable price-performance](#item-tech-news-5) ⭐️ 7.0/10
-6. [Google DeepMind announces Genie 4 for eligible AI Ultra subscribers](#item-tech-news-6) ⭐️ 7.0/10
-7. [pikuma.com Technical Retrospective: Intel x86 From 4004 to 486](#item-tech-news-7) ⭐️ 7.0/10
-8. [Show HN: Interactive Voyager 1 model goes down to a single memory chip](#item-tech-news-8) ⭐️ 7.0/10
-9. [curl Maintainer Says AI Rust Rewrites Lag 200+ Bugfixes](#item-tech-news-9) ⭐️ 7.0/10
-10. [WeChat Xiaowei AI assistant test expands to 30 million daily users](#item-tech-news-10) ⭐️ 7.0/10
+1. [Google releases Gemini 4 Neon with 1M context and $3 input pricing](#item-tech-news-1) ⭐️ 9.0/10
+2. [Unauthenticated RCE reported in Nginx HTTP/2 handling](#item-tech-news-2) ⭐️ 8.0/10
+3. [Anthropic prices its initial public offering](#item-tech-news-3) ⭐️ 8.0/10
+4. [Ruby advisory covers Regexp and String case-conversion flaws](#item-tech-news-4) ⭐️ 8.0/10
+5. [Google DeepMind&\#x27;s Genie 4 opens to eligible AI Ultra subscribers](#item-tech-news-5) ⭐️ 7.0/10
+6. [Blog on LLM-assisted reverse engineering draws practitioner workflow reports](#item-tech-news-6) ⭐️ 7.0/10
+7. [Microsoft announces seven new models focused on price-performance](#item-tech-news-7) ⭐️ 7.0/10
+8. [Voyager 1 interactive model goes down to one memory bit](#item-tech-news-8) ⭐️ 7.0/10
+9. [Telegram post claims nginx flaw chain reaching host root](#item-tech-news-9) ⭐️ 7.0/10
+10. [PHP plans critical security release for all supported versions](#item-tech-news-10) ⭐️ 7.0/10
+11. [OpenAI claims model-assisted design gains for Jalapeño chip and AMD GPU](#item-tech-news-11) ⭐️ 7.0/10
 
 **Financial News**
-1. [Fed October minutes signal further rate hikes and AI inflation risk](#item-finance-news-1) ⭐️ 8.0/10
-2. [Tencent Q3 2026: revenue misses estimates as capex jumps](#item-finance-news-2) ⭐️ 7.0/10
+1. [Fed minutes signal more rate hikes, flag AI inflation risk](#item-finance-news-1) ⭐️ 9.0/10
+2. [Fed Governor Waller says half-point December hike may be needed to &\#x27;shock people&\#x27;](#item-finance-news-2) ⭐️ 8.0/10
 
 ---
 
 ## Technology News
 
 <a id="item-tech-news-1"></a>
-### [Google releases Gemini 4 Neon with 1M-token context](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/) ⭐️ 9.0/10
+### [Google releases Gemini 4 Neon with 1M context and $3 input pricing](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/) ⭐️ 9.0/10
 
-Google has released Gemini 4 Neon, positioned for complex software engineering, knowledge work, and research workflows, and says it is available to developers, enterprises, and Google AI Pro/Ultra subscribers. Google lists pricing at $3 per million input tokens, $0.15 per million cached input tokens, and $15 per million output tokens, with a 1 million-token context window. Google-reported results put Neon first on Artificial Analysis&\#x27;s coding-agent index at 58.6, third on its intelligence index at 61 in the xhigh setting, and at 65.2% on Terminal-Bench 4.1; Google also claims a 32% lower per-task cost than Carbon in the default high setting.
+Google has released Gemini 4 Neon, a new Gemini 4 model aimed at complex software engineering, knowledge work, and scientific research workflows, and made it available to developers, enterprises, and Google AI Pro/Ultra subscribers. It is priced at $3 per million input tokens \($0.15 for cached input\) and $15 per million output tokens, with a 1 million-token context window. The supplied announcement cites a top score of 58.6 on Artificial Analysis&\#x27;s coding-agent index, 61 on the intelligence index at the xhigh setting \(third overall\), and 65.2% on Terminal-Bench 4.1. It also says the default high setting costs 32% less per task than Carbon.
 
 hackernews · yigitdemirag · Nov 18, 21:34 · [Discussion](https://news.ycombinator.com/item?id=50552424)
 
-**「Background」** Google places Gemini 4 Neon within its Gemini 4 lineup alongside Carbon, which the source uses as the cost baseline for Neon&\#x27;s default high setting. Google also cites Artificial Analysis&\#x27; coding-agent and intelligence indices as the external benchmarks for its performance claims.
+**「Background」** Gemini 4 Neon is one model in Google&\#x27;s broader Gemini 4 family, which positions multiple models for different workloads rather than relying on a single flagship. The launch materials compare Neon directly with Carbon, an existing Gemini 4 model, on per-task cost and benchmark performance.
 
-**「Impact」** The practical opening is for teams that need long-context coding or research agents: Neon&\#x27;s 1M-token window and advertised lower per-task cost than Carbon give them a new option, while one commenter notes that Carbon remains positioned for long-horizon work and scores higher on CritPt research-reasoning evaluations. Teams should test Neon against their own research-heavy workloads rather than treating the overall index ranking as a drop-in replacement for Carbon.
+**「Impact」** For teams running coding-agent or terminal workloads, Neon&\#x27;s cited 32% lower per-task cost at the default high setting creates a concrete reason to benchmark it against Carbon, but the announcement does not show that the saving or the 65.2% Terminal-Bench score carries over to each team&\#x27;s own tasks.
 
-**「Community Discussion」** Commenters focused heavily on naming confusion, with one saying it is hard to map names such as Neon, Carbon, Sol, Astra, and Opus to use cases, and another asking whether Google&\#x27;s naming scheme reveals model size class. A separate thread questioned benchmark-driven comparisons, with one user saying Gemini models still feel less capable than Opus 5.5 in general use despite benchmark results, while another user reported faster OpenRouter serving for Neon at 127 tokens per second versus Carbon at 46.
+**「Community discussion」** Commenters debated whether benchmark leadership translates into practical quality: one said Opus 5.5 still feels more capable than recent Gemini models despite the scores, while another noted Neon is positioned above Carbon overall but below it on CritPt research-reasoning evals. A commenter reported Neon serving at 127 tokens per second on OpenRouter versus 46 for Carbon and questioned whether Carbon is being throttled.
 
-**Tags**: `#Gemini`, `#Google AI`, `#LLM release`, `#model naming`, `#AI industry`
+**Tags**: `#Google Gemini`, `#LLM releases`, `#AI models`, `#benchmarking`, `#model positioning`
 
 ---
 
 <a id="item-tech-news-2"></a>
-### [Wiz reports unauthenticated RCE flaws in Nginx HTTP/2](https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities) ⭐️ 8.0/10
+### [Unauthenticated RCE reported in Nginx HTTP/2 handling](https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities) ⭐️ 8.0/10
 
-Wiz reports two Nginx HTTP/2 vulnerabilities, CVE-2026-123633 and CVE-2026-123007, that it describes as enabling unauthenticated remote code execution. The flaws affect Nginx deployments with HTTP/2 enabled, which is not the default configuration. The supplied source does not specify affected Nginx versions or a patched release, and commenters disputed how exploitable the bugs are in practice.
+Wiz reports unauthenticated remote code execution vulnerabilities in Nginx&\#x27;s HTTP/2 handling, with CVE-2026-123633 and CVE-2026-123007 listed in the supplied source. The issue affects Nginx deployments with HTTP/2 enabled, which is not the default configuration. The supplied material cites disabling HTTP/2 as an immediate workaround but does not state affected Nginx versions, a fixed release, or whether exploitation has been observed.
 
 hackernews · speedping · Nov 18, 15:19 · [Discussion](https://news.ycombinator.com/item?id=50547374)
 
-**「Background」** HTTP/2 is a multiplexed revision of HTTP, and these bugs sit in NGINX&\#x27;s own protocol handling rather than in the applications it serves, so a site can be exposed even when its application code is secure. Xint&\#x27;s analysis says every official NGINX release from 1.9.5 through 1.31.8 carries CVE-2026-123007 and that the vulnerable code was still in master as of November 10, 2026; Wiz rates both CVEs critical at CVSS 4.0 9.2.
+**「Background」** The flaw tracked as CVE-2026-123007 is a heap-based buffer overflow in Nginx&\#x27;s HTTP/2 handling: crafted requests can push the flow-control window past permitted limits and corrupt memory. It has existed since HTTP/2 support was added in Nginx 1.9.5 in 2015, and public proof-of-concept exploit code is now available, according to security vendors&\#x27; advisories.
 
-**「Impact」** Operators who have enabled HTTP/2 should prioritize patching or disable HTTP/2 as a stopgap. Because the reported flaws are unauthenticated, exposed servers do not require stolen credentials for an attacker to attempt exploitation.
+**「Who needs to act」** Because the flaw lives in nginx&\#x27;s HTTP/2 handling, administrators should first confirm whether their builds actually enable HTTP/2 — it is off by default, so exposure is concentrated in deployments that explicitly turned it on — then patch once fixed builds are available, or disable \`http2\` in the listen directive as an interim step. The population at stake is large: W3Techs puts nginx at 29.7% of websites with a known web server, although the supplied source gives no confirmed affected version range, so version-level scoping remains unverified.
 
-**「Community Discussion」** One commenter criticized the disclosure timeline, arguing that the fix had been visible in the open-source repository about a week before the advisory and that a temporary PSA to disable HTTP/2 would have been warranted. Others countered that HTTP/2 is not enabled by default and reaches only about 12% of servers, while another commenter claimed exploitation requires roughly 128GB of HTTP/2 traffic and specific CPU instructions and called it a non-issue.
+**「Community Discussion」** Commenters focused on exposure and disclosure timing: fduran noted that HTTP/2 is not enabled by default and cited W3Techs saying about 12% of servers use it, while black3r argued that the fix appeared in the open-source repository a week before disclosure, creating an exploitation window. pelzatessa shared links to a vulnerability checker and workarounds.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://xint.io/blog/nginx2root-remote-code-execution">NGINX 2 Root: New Remote Code Execution Vulnerabilities in nginx ...</a></li>
-<li><a href="https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities">Unauthenticated Remote Code Execution in NGINX ... | Wiz Blog</a></li>
+<li><a href="https://access.redhat.com/security/cve/cve-2026-123007">CVE-2026-123007 - Red Hat Customer Portal</a></li>
+<li><a href="https://www.upwind.io/blog/nginx-cve-2026-123007-and-cve-2026-123633-four-web-facing-rces-one-patch-and-where-kubernetes-is-exposed">Remote Code Execution in NGINX HTTP/2: CVE-2026-123007 and ...</a></li>
+<li><a href="https://www.sophos.com/en-us/security-advisories/sophos-sa-20261118-nginx2root">Advisory: NGINX Vulnerabilities - nginx2root (CVE-2026-123007 ...</a></li>
+<li><a href="https://w3techs.com/technologies/comparison/ws-nginx">Nginx usage statistics, November 2026 - W3Techs</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#nginx`, `#http/2`, `#security vulnerability`, `#remote code execution`, `#CVE`
+**Tags**: `#nginx`, `#remote code execution`, `#http/2`, `#vulnerability disclosure`, `#web servers`
 
 ---
 
 <a id="item-tech-news-3"></a>
-### [Xint discloses nginx-to-root chain of five flaws](https://nginx2root.com/) ⭐️ 8.0/10
+### [Anthropic prices its initial public offering](https://www.anthropic.com/news/anthropic-prices-initial-public-offering) ⭐️ 8.0/10
 
-Xint&\#x27;s NGINX2Root disclosure claims a chain of five nginx vulnerabilities plus a Linux kernel flaw can take an unauthenticated nginx visitor to host root; the Telegram post identifies CVE-2026-123007 as an HTTP/2 flow-control memory-corruption bug that allows command execution in a worker without authentication. It says nginx 1.30.7 and 1.31.9 fix 10 CVEs on November 18, that Rapid7 has published a proof-of-concept, and that no in-the-wild exploitation is known. These details come from a Telegram summary and have not been independently verified.
+Anthropic announced that it has priced its initial public offering, taking the Claude developer from private fundraising to a public listing. The supplied announcement text contains no pricing terms, share counts, or valuation, so none of the deal&\#x27;s headline numbers can be confirmed from the source. Figures circulating in the Hacker News thread — an offering of 980 million Class A shares at $83, expanded from an earlier 825 million, roughly $105 billion in proceeds, and a valuation near $1.5 trillion — appear only in reader comments and remain unverified.
 
-telegram · zaihuapd · Nov 18, 16:21
+hackernews · surprisetalk · Nov 18, 23:30 · [Discussion](https://news.ycombinator.com/item?id=50553843)
 
-**「Background」** The HTTP/2 bug central to the chain, CVE-2026-123007, was present in every official nginx release from 1.9.5, shipped in September 2015, through 1.31.8, and Xint reported that the vulnerable code was still in the development branch as of November 10, 2026. The first fixed releases are 1.31.9 and 1.30.7.
+**「Background」** An IPO price is the per-share price at which a company sells stock to public investors; combined with the number of shares offered, it sets the gross proceeds and the company&\#x27;s implied valuation ahead of the first trading day. Anthropic&\#x27;s offering is for Class A common stock, with 956,351,354 shares sold by the company and 23,648,646 by selling stockholders.
 
-**「Impact」** Operators are directed to nginx 1.30.7 or 1.31.9; the post says those who cannot upgrade should disable externally accessible HTTP/2, which can affect clients that depend on the protocol.
+**「Community discussion」** One commenter likened Anthropic and OpenAI to dot-com-era leaders such as AltaVista and Pets.com — first-mover advantage, heavy spending, and no durable moat — while another argued that whatever the moat question, rivals have not closed the gap, pointing to Google&\#x27;s uneven efforts and OpenAI&\#x27;s position against Opus 5.5, and crediting anti-distillation measures with slowing Chinese model development. Others focused on the number itself, with one reader noting that a roughly $1.5 trillion valuation would exceed the level Apple first reached in 2020, and another reconstructing the share and proceeds arithmetic from the filing.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://xint.io/blog/nginx2root-remote-code-execution">NGINX 2 Root : New Remote Code Execution Vulnerabilities in nginx ...</a></li>
-<li><a href="https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html">10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers...</a></li>
+<li><a href="https://www.anthropic.com/news/anthropic-prices-initial-public-offering">Anthropic prices initial public offering \ Anthropic</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#nginx`, `#HTTP/2`, `#privilege escalation`, `#vulnerability disclosure`, `#CVE`
+**Tags**: `#Anthropic`, `#IPO`, `#AI industry`, `#public markets`, `#Hacker News`
 
 ---
 
 <a id="item-tech-news-4"></a>
-### [Quad9’s France exit shows DNS blocking is the wrong anti-piracy tool](https://techstackups.com/articles/quad9-leaves-france-dns-blocking/) ⭐️ 7.0/10
+### [Ruby advisory covers Regexp and String case-conversion flaws](https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/) ⭐️ 8.0/10
 
-DNS resolver Quad9 has withdrawn from France over DNS blocking, and this analysis argues that using resolvers to enforce piracy law is overbroad and inappropriate. The piece treats the withdrawal as a case study, contending that DNS-level blocking turns resolver operators into enforcement and censorship choke points instead of targeting alleged infringers. It is an opinion/analysis with limited primary technical detail, so it does not establish the French order’s scope or its measurable effects.
+Ruby has published a security advisory covering multiple vulnerabilities in core Regexp and String case-conversion code, affecting applications that process non-ASCII text. The advisory had no assigned CVE identifiers at publication and instead used GitHub Security Advisory identifiers, according to a commenter, leaving tracking dependent on GHSA records. Community reproductions point to encoding-specific length changes: Windows-1252 upcasing can turn ß into SS, and a Shift\_JIS downcase example is reported to trigger a buffer-size problem.
 
-hackernews · ritzaco · Nov 18, 13:18 · [Discussion](https://news.ycombinator.com/item?id=50545958)
+hackernews · runesoerensen · Nov 18, 23:52 · [Discussion](https://news.ycombinator.com/item?id=50554038)
 
-**「Background」** A DNS resolver translates domain names into IP addresses, and Quad9 is a nonprofit public resolver. In October 2026, reporting said a Paris court ordered Quad9 to block domains accused of distributing unauthorized sports broadcasts; Quad9 was set to stop serving French users on November 24 rather than comply, making it the second DNS resolver to leave France over such orders.
+**「Background」** Ruby&\#x27;s regular-expression engine and String case-conversion methods process strings in arbitrary encodings, and some case mappings change length—uppercasing ß, for example, produces “SS”—so buffer and encoding handling are central to these bugs. The November 18, 2026 advisory covers seven vulnerabilities in those paths, and fixes were released in Ruby 4.0.10, 3.4.13, and 3.3.14.
 
-**「Impact」** The concrete consequence is that users in France who relied on Quad9 lose that resolver option, while other independent DNS operators face the same choice the article describes: comply with blocking mandates or exit the jurisdiction.
+**「Who is exposed」** Ruby applications that call \`upcase\`/\`downcase\` on non-ASCII strings are directly exposed: a commenter&\#x27;s reproduction against an unfixed build, using a Shift\_JIS string, returned a result with a reported bytesize of 4,294,967,302, and another commenter traced a Windows-1252 buffer-overrun path where uppercasing &quot;ß&quot; expands to &quot;SS&quot; past the allocated headroom. Teams running production Ruby should apply the advisory&\#x27;s patched releases and audit case-conversion of untrusted or legacy-encoded input rather than relying on a CVE identifier for tracking, since the advisory states CVE IDs had not yet been assigned and refers to GHSA IDs instead.
 
-**「Community discussion」** Commenters were skeptical of DNS enforcement: one argued that any anti-piracy effort short of prosecuting pirates is a backdoor to suppressing speech, and another said the better remedy is making paid options easier than piracy, citing DRM-free movie downloads at $2–5. A third asked whether blame belongs with judges or lawmakers, framing the issue as either judicial incompetence or a defensible reading of a bad law, while another questioned pursuing individual pirates when commercial IP use by AI companies goes unprosecuted.
+**「Community discussion」** Commenters focused on concrete failure modes: tptacek described Windows-1252 upcasing of ß to SS as a one-character length increase that the case-conversion code may not reserve headroom for, while pentestercrab posted a Shift\_JIS downcase reproducer using a multi-gigabyte string. nickcw said GitHub&\#x27;s CVE assignment is running about four weeks behind, in response to the advisory&\#x27;s use of GHSA identifiers.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://torrentfreak.com/dns-resolver-quad9-will-leave-france-after-court-orders-piracy-blocking-penalty/">DNS Resolver Quad9 Will Leave France After Court Orders ...</a></li>
-<li><a href="https://cyberinsider.com/quad9-to-leave-france/">Quad9 to leave France after court orders piracy-related DNS ...</a></li>
+<li><a href="https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/">Security advisories: multiple vulnerabilities in Regexp and ...</a></li>
+<li><a href="https://cybersecuritynews.com/ruby-patches-7-security-vulnerabilities/">Ruby Patches 7 Security Vulnerabilities, Including Buffer ...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#DNS`, `#internet censorship`, `#piracy`, `#Quad9`, `#internet policy`
+**Tags**: `#ruby`, `#security-vulnerabilities`, `#regexp`, `#string-encoding`, `#buffer-overflow`
 
 ---
 
 <a id="item-tech-news-5"></a>
-### [Microsoft announces seven AI models pitched at scalable price-performance](https://microsoft.ai/news/microsoft-ignite-2026/) ⭐️ 7.0/10
+### [Google DeepMind&\#x27;s Genie 4 opens to eligible AI Ultra subscribers](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/) ⭐️ 7.0/10
 
-Microsoft announced seven new AI models under a scalable price-performance pitch. The available item does not provide model names beyond a commenter&\#x27;s reference to MAI Code 2, nor benchmark figures, pricing tiers, release dates, or compatibility details, so the announcement&\#x27;s performance and cost claims cannot be independently assessed. A commenter says MAI Code 2 has performed well in their usual work and that Microsoft positions it near Opus or Sol, but that is a single user report rather than a published benchmark.
+Google DeepMind has released Genie 4, a generative world-model system, saying it is available to eligible Google AI Ultra subscribers. The supplied announcement provides no technical specifications, regional availability list, or independent benchmark results, so the system&\#x27;s capabilities cannot be verified from the available material. Access details are also unclear: commenters report that subscription eligibility varies by account type and possibly region.
 
-hackernews · gmays · Nov 18, 16:08 · [Discussion](https://news.ycombinator.com/item?id=50548021)
+hackernews · leumon · Nov 18, 18:49 · [Discussion](https://news.ycombinator.com/item?id=50550415)
 
-**「Background」** Microsoft&\#x27;s price-performance claim is measured against established coding models: its own comparison puts MAI Code 2 at 98% of GPT-6.1 Sol&\#x27;s coding quality for about 40% of the price, and at 96% of Opus 5.5&\#x27;s performance for 5% of the price. The Ignite lineup also covers specialized models for vulnerability discovery and image generation, reflecting a task-specific rather than one-model-fits-all approach.
+**「Background」** A world model is an AI system that learns the dynamics of an environment and can generate or predict interactive scenes, rather than producing only text or still images. That makes world models relevant to simulated environments and game-like systems, the use commenters discuss.
 
-**「What it means for Copilot users」** Developers can already try the coding models from the announcement — MAI Code 2 and the smaller MAI Code 2 Flash — inside GitHub Copilot, including on its free plan, according to coverage of the launch. The headline figures \(98% of GPT-6.1 Sol&\#x27;s performance at 40% of the cost, 96% of Claude Opus 5.5&\#x27;s at 5% of the cost\) are Microsoft&\#x27;s own claims averaged over four coding benchmarks, and the announcement footnote qualifies the cost basis, so teams weighing a switch should benchmark on their own workloads rather than treat the ratios as independently measured.
+**「Impact」** For prospective users, a Google AI Ultra subscription may not be sufficient on its own: one commenter said a Workspace account could not obtain Ultra, while a non-Workspace Gmail account showed Genie 3 rather than Genie 4, leaving account type and UK availability unresolved.
 
-**「Community Discussion」** Commenters split between a hands-on report that MAI Code 2 is “quite good” for ordinary work and skepticism about Microsoft&\#x27;s market position: one argued that the models need open-source or open-weight releases to gain share, comparing the alternative to Windows Phone. Others criticized the Ignite keynote as shallow and said they see no reason to adopt Microsoft&\#x27;s AI stack.
+**「Community discussion」** Commenters spent little time on technical details, focusing instead on whether and how to pay for access and on ethical unease; one longtime reader said the pricing-and-capability framing left out potentially devastating consequences. Others speculated that world models could eventually serve as game engines, with one asking whether Google would permit remakes of games such as GTA.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://microsoft.ai/news/microsoft-ignite-2026/">Seven new world class models at scalable... | Microsoft AI</a></li>
-<li><a href="https://forklog.com/en/microsoft-unveils-ai-models-for-coding-and-cybersecurity/">Microsoft unveils AI models for coding and cybersecurity | ForkLog</a></li>
-<li><a href="https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/">MAI Code 2 and Code 2 Flash: Everyday coding at scalable ...</a></li>
-<li><a href="https://felloai.com/mai-code-2/">MAI Code 2: Price, Benchmarks and Copilot Plans</a></li>
-<li><a href="https://www.datastudios.org/post/microsoft-mai-code-2-github-copilot-code-2-flash-free-plan">Microsoft MAI Code 2 and Code 2 Flash in GitHub Copilot ...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#microsoft`, `#ai-models`, `#price-performance`, `#model-release`, `#coding-assistants`
+**Tags**: `#generative AI`, `#world models`, `#Google DeepMind`, `#game engines`, `#AI product availability`
 
 ---
 
 <a id="item-tech-news-6"></a>
-### [Google DeepMind announces Genie 4 for eligible AI Ultra subscribers](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/) ⭐️ 7.0/10
+### [Blog on LLM-assisted reverse engineering draws practitioner workflow reports](https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering) ⭐️ 7.0/10
 
-Google DeepMind announced Genie 4, a new version of its world-model system. The available material provides no benchmarks, model details, or precise rollout terms; the announcement lists access for eligible Google AI Ultra subscribers, and commenters report confusion over regional and workspace-account eligibility.
+A Slow Chronicle blog post on LLM-assisted reverse engineering is being discussed on Hacker News, where commenters describe using models like Gemini on real projects rather than hypotheticals. One commenter said they reverse engineered a CCTV camera&\#x27;s cloud connection plugin in about two hours, after a 15-minute setup that ran the vendor&\#x27;s desktop software in a separate network namespace under tcpdump to capture only the needed traffic; the breakthrough was discovering a different server URL than existing GitHub projects expected. Another described decompiling Civilization 1 as &quot;software archaeology,&quot; and said results improved only after scaling back an initially overengineered agent workflow and letting the agents guide themselves. A third reported extracting story content from a toy&\#x27;s USB cartridge that shipped as a single .dat file. The supplied material contains only the post&\#x27;s title and URL plus the discussion, so the article&\#x27;s own methods and claims could not be checked.
 
-hackernews · leumon · Nov 18, 18:49 · [Discussion](https://news.ycombinator.com/item?id=50550415)
+hackernews · ioma8 · Nov 18, 22:29 · [Discussion](https://news.ycombinator.com/item?id=50553225)
 
-**「What Genie is」** Genie is Google DeepMind&\#x27;s family of generative world models: systems that use text and image prompts to produce photorealistic environments that users can explore and interact with in real time. DeepMind describes Genie 4 as its &quot;most interactive world model yet,&quot; continuing that prompt-to-interactive-world approach.
+**「Context」** Reverse engineering typically means recovering undocumented behavior — a file format, a network protocol, or a binary&\#x27;s logic — from artifacts rather than source code. The Slow Chronicle post is a hands-on account of using LLMs in that work; its author says the assistance helped reverse engineer devices such as the Alphasmart NEO, claiming results that would have taken years by hand.
 
-**「Access and audio changes for Genie users」** Access is the binding constraint: Genie 4 is offered to eligible Google AI Ultra subscribers, and one commenter reported that their Workspace account could not obtain Ultra while their consumer account still surfaced Genie 3, leaving UK availability unconfirmed — so teams planning to build on Genie 4 should confirm subscription tier and regional eligibility before committing. For those with access, Genie 4 generates audio such as music, ambient noise, and interactive dialogue simultaneously with the world, so agent-training pipelines built around silent world output, such as SIMA runs, must handle the added audio channel.
+**「Impact」** The recurring lesson in these accounts is that harness design, not model choice, determined success: isolating and capturing only relevant traffic, or removing scaffolding that constrained the agents, preceded the results. The Civilization 1 commenter also cautioned that such projects generate a lot of custom tooling whose reuse on other decompilation efforts is unproven, so anyone budgeting a similar effort should expect project-specific glue code. A commenter with no reverse-engineering experience reported completing an abandoned audio effects plugin and a discontinued DSP instrument, suggesting the entry barrier is lower, though that is a single self-reported case.
 
-**「Community discussion」** Commenters focused on practical access, with one unable to determine whether UK availability or workspace-account restrictions explain why their account shows Genie 3 rather than Genie 4. Others debated whether the work is craft-driven rather than commercially viable, raised concerns about negative consequences, and treated 360-degree scene consistency as a key test of a world model.
+**「Community Discussion」** Commenters largely agreed the approach works in practice but disagreed implicitly on how much orchestration is needed: crc32 said overengineered agent pipelines hurt until they were rolled back, while saidinesh5 credited careful manual instrumentation \(namespace isolation plus tcpdump\) for the two-hour result. The reports are anecdotal and self-reported, with no benchmarks or shared code presented in the supplied comments.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://deepmind.google/models/genie/">Genie 4 — Google DeepMind</a></li>
-<li><a href="https://deepmind.google/models/genie/">Genie 4 — Google DeepMind</a></li>
-<li><a href="https://deepmind.google/models/model-cards/genie-4/">Genie 4 - Model Card — Google DeepMind</a></li>
+<li><a href="https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering">LLM assisted reverse engineering · Slow Chronicle</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#world models`, `#Google DeepMind`, `#generative AI`, `#AI research`, `#product availability`
+**Tags**: `#LLM-assisted reverse engineering`, `#reverse engineering`, `#LLM tooling`, `#software archaeology`, `#agentic workflows`
 
 ---
 
 <a id="item-tech-news-7"></a>
-### [pikuma.com Technical Retrospective: Intel x86 From 4004 to 486](https://pikuma.com/blog/history-of-x86-4004-to-486) ⭐️ 7.0/10
+### [Microsoft announces seven new models focused on price-performance](https://microsoft.ai/news/microsoft-ignite-2026/) ⭐️ 7.0/10
 
-pikuma.com published a technical retrospective tracing Intel&\#x27;s CPU evolution from the 4004 through the 486, aimed at systems and software engineers interested in early x86 architecture. The item is a historical analysis rather than a new product announcement or an independently measured benchmark. No primary article text was supplied with the item, so its specific technical claims could not be checked here.
+Microsoft announced seven new AI models at Ignite 2026, positioning them around scalable price-performance. The supplied material provides no independent benchmark results, so the models&\#x27; comparative performance remains a vendor positioning claim. For LLM users and developers, the launch adds models to evaluate, but the available information does not establish availability, compatibility, or independently measured comparisons with rivals.
 
-hackernews · ibobev · Nov 18, 14:47 · [Discussion](https://news.ycombinator.com/item?id=50546967)
+hackernews · gmays · Nov 18, 16:08 · [Discussion](https://news.ycombinator.com/item?id=50548021)
 
-**「Background」** The 4004&\#x27;s architecture laid the foundation for later Intel processors, including the 4040 and the 8-bit 8008 and 8080. The 8008, introduced in April 1972, could address 16 KB of memory and was designed by Computer Terminal Corporation but implemented and manufactured by Intel.
+**「Context」** Microsoft Ignite is Microsoft&\#x27;s annual developer conference, used for major product and platform announcements. The seven models announced there belong to Microsoft&\#x27;s in-house MAI family, spanning code, security, image, voice, and routing, according to a report on the event. That report says the flagship coding model, MAI Code 2, is already running in GitHub Copilot.
 
-**「Community Discussion」** Commenters supplied corrections and context: chimpontherun argues the original little-endian choice on the 2200 was driven by data-access speed rather than arithmetic, and that multiplexed address/data buses were not unique to the 8085; petercooper and kens dispute parts of the article&\#x27;s framing of the 8008&\#x27;s instruction set and its relationship to the 4004. Separately, skissane questions why Intel and AMD still make modern PCs start in a mode compatible with 1978-era chips, arguing that BIOS writers could adapt if the vendors changed the requirement.
+**「Evaluation burden falls on buyers」** Developers weighing Microsoft&\#x27;s models against incumbents will have to verify the price-performance claim on their own workloads: the supplied material gives no per-token pricing, benchmark numbers, or availability limits for the seven models, so cost comparisons against Opus or Sol remain unverified. One commenter who tested MAI Code 2 reports it is &quot;quite good&quot; for everyday work and roughly comparable to those models, which makes a hands-on trial the practical next step rather than relying on the vendor&\#x27;s positioning.
+
+**「Community discussion」** Hacker News commenters were split: one said hands-on testing of MAI Code 2 was &quot;quite good&quot; and broadly consistent with claims that it is on par with Opus or Sol, while another argued Microsoft needs open-source or open-weight releases to secure market share, comparing the situation to Windows Phone. Others criticized the Ignite keynote and Microsoft&\#x27;s leadership without offering specific technical objections.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Intel_4004">Intel 4004 - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Intel_8008">Intel 8008 - Wikipedia</a></li>
+<li><a href="https://ignite.microsoft.com/">Your home for Microsoft Ignite</a></li>
+<li><a href="https://usb.ru/news/microsoft-mai-seven-models-ignite-2026/">Microsoft выпустила семь моделей MAI : код почти... | USB.RU</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#x86`, `#computer-history`, `#cpu-architecture`, `#intel`, `#hardware`
+**Tags**: `#Microsoft`, `#AI models`, `#LLM`, `#price-performance`, `#Hacker News`
 
 ---
 
 <a id="item-tech-news-8"></a>
-### [Show HN: Interactive Voyager 1 model goes down to a single memory chip](https://rshekhar.com/voyager/) ⭐️ 7.0/10
+### [Voyager 1 interactive model goes down to one memory bit](https://rshekhar.com/voyager/) ⭐️ 7.0/10
 
-Raj Shekhar has published an interactive site at rshekhar.com/voyager that lets visitors inspect Voyager 1, including its nuclear battery&\#x27;s 24 plutonium spheres, its data computer down to individual memory chips, and the Golden Record cover; it also shows where both Voyagers are now and which Earth dish is listening live. The site walks through how Voyager 1 was repaired by radio, and Shekhar posted it as Voyager 1 reached one light-day from Earth and made a four-minute film from the material. It is an educational visualization rather than a new mission result, and Shekhar supplied direct links for hard-to-find views such as a single bit of command-computer memory.
+Raj Shekhar has published an interactive Voyager 1 visualization at rshekhar.com/voyager that lets visitors inspect the spacecraft&\#x27;s nuclear battery down to its 24 plutonium spheres, its data computer down to individual memory chips, and a single bit of command-computer memory. The site also shows the live positions of both Voyagers and which Earth dish is listening, explains the Golden Record cover&\#x27;s playback instructions, and includes a section on how Voyager 1 was fixed by radio; Shekhar also released a four-minute film. The author says Voyager 1 reached one light-day from Earth on the day of posting. Direct links are provided for hard-to-find sections, including the RTG, data-computer memories, one command-computer bit, the Golden Record cover, and the repair story.
 
 hackernews · raj-shekhar · Nov 18, 16:18 · [Discussion](https://news.ycombinator.com/item?id=50548161)
 
-**「Why one light-day matters」** Voyager 1 is the first human-made object to reach interstellar space, and it is now roughly one light-day from Earth — about 173 astronomical units, the milestone this interactive breakdown is built around. At that range a radio command takes close to a day to arrive and its reply another day to come back, so the memory-chip repair the site documents under &quot;how Voyager 1 was fixed by radio&quot; had to be executed as a pre-planned sequence rather than live troubleshooting.
+**「Background」** The project works as a physical teardown: Voyager 1&\#x27;s power source, data computer, command computer, and Golden Record are presented as nested parts, so a memory chip or a single bit becomes a location rather than an abstraction. The radio-repair section follows from the same constraint—the spacecraft can be diagnosed and commanded only through its distant radio link.
 
-**「Impact」** For hardware and embedded-systems readers, the drill-down paths expose the spacecraft&\#x27;s computer organization at bay, memory-plane, and single-bit levels, so the design can be inspected directly rather than through a separate technical reference.
+**「Impact」** The direct links make the model practical for reference: readers can open the RTG, a data-computer memory bay, one command-computer bit, the Golden Record cover, or the repair story without navigating the full spacecraft. It remains an educational visualization rather than a new mission or hardware disclosure.
 
-**「Community discussion」** Commenters praised the detail and shared related Golden Record projects, including a decoder for the record&\#x27;s raw audio; one commenter asked what physical failure mode made a CMOS memory IC consistently misread stored values, and another asked whether the site was AI-generated and checked against authoritative sources. Those questions were not answered in the supplied comments.
+**「Community discussion」** Commenters praised the presentation, and one linked a separate Golden Record tribute and a decoder for the probes&\#x27; raw audio. The more critical threads asked what physical failure makes a CMOS memory chip read stored values incorrectly and whether the project was largely AI-generated and checked against authoritative sources.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://science.nasa.gov/mission/voyager/voyager-1/">Voyager 1 : The Farthest Spacecraft — NASA Science</a></li>
-<li><a href="https://phys.org/news/2026-11-nasa-voyager-day-interstellar-space.html">NASA&#x27;s Voyager 1 closes in on a light - day in interstellar space for...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#interactive-visualization`, `#computer-hardware`, `#spacecraft`, `#embedded-systems`, `#education`
+**Tags**: `#Voyager 1`, `#interactive visualization`, `#spacecraft hardware`, `#computer memory`, `#technical education`
 
 ---
 
 <a id="item-tech-news-9"></a>
-### [curl Maintainer Says AI Rust Rewrites Lag 200+ Bugfixes](https://simonwillison.net/2026/Nov/18/daniel-stenberg/) ⭐️ 7.0/10
+### [Telegram post claims nginx flaw chain reaching host root](https://nginx2root.com/) ⭐️ 7.0/10
 
-curl maintainer Daniel Stenberg wrote that AI agents converted 185,000 lines of C code into 340,000 lines of Rust in a little over three weeks, while the actual curl project merged more than 300 commits during the same period, including over 200 bugfixes and several vulnerability fixes. He said none of the Rust rewrites contain those fixes and asked whether the generated clones can keep up as curl continues to change. Stenberg added that in another month the project would have made another 200 fixes and perhaps addressed more vulnerabilities.
+A Telegram aggregation post claims a researcher identified as Xint \(linked to the site Precursor Security\) disclosed &quot;NGINX2Root,&quot; a chain of five nginx vulnerabilities plus a Linux kernel flaw that lets an unauthenticated nginx visitor reach root on the host. The post says CVE-2026-123007 is an HTTP/2 flow-control memory-corruption bug permitting unauthenticated command execution inside a worker process, and that nginx 1.30.7 and 1.31.9 fixed 10 CVEs on November 18, with a Rapid7 proof of concept already published and no in-the-wild exploitation observed. None of this is corroborated by a linked nginx advisory or vendor statement, and the post&\#x27;s own figures are inconsistent \(five nginx flaws versus 10 CVEs fixed\), so the CVE identifier, affected version ranges, and the escalation path to host root should be treated as unverified. The stated mitigation for operators who cannot upgrade is to disable external HTTP/2.
 
-rss · Simon Willison · Nov 18, 15:58
+telegram · zaihuapd · Nov 18, 16:21
 
-**「Background」** curl is a C codebase, and the Rust efforts Stenberg describes are separate AI-generated ports rather than changes merged into upstream curl. That distinction matters because upstream development continued in parallel: the comparison is between the maintained project and generated clones that must independently track later bug and security fixes.
+**「Context behind the nginx-to-root chain」** External coverage describes CVE-2026-123007 as an HTTP/2 flow-control integer underflow that has existed since nginx introduced HTTP/2 in 2015, with Rapid7&\#x27;s Stephen Fewer credited and related findings reported by Xint and other researchers. The claimed root escalation depends on chaining that nginx worker-level flaw with a separate Linux kernel SCTP defect, which is what turns a web-server compromise into host root.
 
-**「Impact」** For developers considering a generated Rust port as a replacement, the comparison highlights a continuing maintenance gap: a one-time conversion does not include curl&\#x27;s 200+ bugfixes or vulnerability fixes, so adopters would need a way to track and apply upstream changes.
+**「Impact」** Operators running HTTP/2 on nginx releases from 1.9.5 through 1.31.8, including the current OpenResty 1.31.8.1 release, face a publicly demonstrated memory-corruption path and should upgrade to 1.31.9 or 1.30.7. F5&\#x27;s advisory says the flaw can overflow the worker heap and, where ASLR is bypassed, allow code execution.
 
-**Tags**: `#AI coding agents`, `#curl`, `#Rust`, `#open source maintenance`, `#security`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.ox.security/blog/nginx2root-five-critical-nginx-flaws-expose-web-servers-to-remote-code-execution/">NGINX 2 Root : 5 Critical NGINX RCE Vulnerabilities ... | OX Security</a></li>
+<li><a href="https://github.com/arkrwn/NGINX2Root-CVE-2026-123007">GitHub - arkrwn/ NGINX 2 Root - CVE - 2026 - 123007 : Research Note...</a></li>
+<li><a href="https://www.getastra.com/blog/security-advisory/nginx2root/">nginx 2 root : Five nginx RCE Flaws and a Kernel Bug...</a></li>
+<li><a href="https://github.com/openresty/openresty/issues/1166">Request: urgent release with nginx 1.31.9 / 1.30.7 security ...</a></li>
+<li><a href="https://my.f5.com/manage/s/article/K000163926">NGINX ngx_http_v2_module vulnerability CVE-2026-123007</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#nginx`, `#vulnerability-disclosure`, `#remote-code-execution`, `#cve`, `#web-server-security`
 
 ---
 
 <a id="item-tech-news-10"></a>
-### [WeChat Xiaowei AI assistant test expands to 30 million daily users](https://mp.weixin.qq.com/s/r3NthxJZQJgztyLADwNV4A) ⭐️ 7.0/10
+### [PHP plans critical security release for all supported versions](https://www.php.net/archive/2026.php) ⭐️ 7.0/10
 
-Tencent said in its Q3 2026 earnings report that WeChat&\#x27;s Xiaowei AI assistant has expanded testing to 30 million daily active users and is being gradually integrated into WeChat chats, Moments, Official Accounts and Channels. The assistant uses a cost-optimized custom WeLM model, and Tencent claims its inference cost is low and continuing to fall. Tencent also expects some inference tasks to run on users&\#x27; devices in the future.
+PHP&\#x27;s security team says it will publish a CRITICAL-severity security release on November 19, 2026, from 14:00 to 14:30 UTC, fixing vulnerabilities in all supported PHP versions. The update is part of PHP&\#x27;s regular four-week release cycle, and the affected version numbers and technical details will only be disclosed when the release goes live. PHP says the CRITICAL-rated issues require non-default configurations or uncommon environments to trigger, but it recommends upgrading promptly after the release.
 
-telegram · zaihuapd · Nov 18, 11:35
+telegram · zaihuapd · Nov 19, 07:10
 
-**「Context」** Tencent names WeLM as the base model for Xiaowei and says the version used here is customized for cost efficiency; the source does not disclose its parameter count or version. The 30 million figure is a daily-active-user count within an expanded test, so it does not establish that Xiaowei is generally available to all WeChat users.
+**「Background」** PHP ties security fixes to its regular four-week release cadence, and the security team withholds vulnerability details and fixed version numbers until the update goes live. That means administrators cannot assess affected code paths from the advance notice alone; they must wait for the release and then map the fixed versions to their deployments.
 
-**「Impact」** The 30 million figure describes an expanded test rather than a general release; Tencent did not disclose a full-rollout date, device requirements, or which tasks would run on-device. For users, Xiaowei is appearing across more WeChat surfaces during the test, but availability remains limited to the test scope.
+**「Deployment planning」** Because PHP will publish the affected version numbers and technical details only when the release goes live in the 14:00–14:30 UTC window on November 19, operators cannot assess their exposure beforehand and should have upgrade and rollback steps ready to execute the same day. The team&\#x27;s statement that the CRITICAL-rated issues require non-default configurations or uncommon environments means admins should inventory which non-default extensions and settings they actually run rather than assuming default installs are safe, and verify after patching that those specific configurations were covered.
 
-**Tags**: `#WeChat`, `#Tencent`, `#AI assistant`, `#WeLM`, `#on-device AI`
+<details><summary>References</summary>
+<ul>
+<li>Upcoming Critical PHP Security Release scheduled for Thursday ...</li>
+
+</ul>
+</details>
+
+**Tags**: `#PHP`, `#security update`, `#critical vulnerability`, `#open source`, `#software maintenance`
+
+---
+
+<a id="item-tech-news-11"></a>
+### [OpenAI claims model-assisted design gains for Jalapeño chip and AMD GPU](https://openai.com/index/advancing-chip-design-with-our-models/) ⭐️ 7.0/10
+
+OpenAI says its models contributed to the design of its Jalapeño inference chip, reducing standard-cell area by about 13% in vector units and about 10% in matrix units, with the optimizations validated during chip bring-up. In work with AMD, OpenAI reports power, performance, and area improvements of up to 14% on flagship GPU IP versus a highly optimized baseline, and says some changes are in designs sent to manufacturing. OpenAI also announced a collaboration with Synopsys to train a GPT-Synopsys model. The figures are vendor-provided, and the source offers no independent verification or detailed methodology.
+
+telegram · zaihuapd · Nov 19, 09:30
+
+**「Background」** Chip design teams normally balance power, performance, and area \(PPA\) through many cell- and IP-level choices inside EDA flows. OpenAI&\#x27;s account places its models at that optimization stage: it says they were used on its own Jalapeño inference chip and on AMD&\#x27;s flagship GPU IP, and it pairs that work with a plan to train a GPT-Synopsys model with Synopsys.
+
+**「What it means for design teams」** Chip design teams should read the up-to-14% PPA figure as a vendor comparison against a &quot;highly optimized baseline&quot; on selected GPU IP blocks rather than a whole-chip result, and because OpenAI says some AMD edits have entered designs sent to manufacturing, conventional verification and sign-off remain the gating step for any AI-proposed change. The GPT-Synopsys effort would, as described, put a specialized model in direct control of Synopsys EDA tools, making tool integration and access terms the practical question for Synopsys users.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://explainx.ai/blog/openai-amd-jalapeno-chip-design-astra-ppa-november-2026">OpenAI AMD Chip Design: 14% PPA in 5 Months (Nov 2026 ...</a></li>
+<li><a href="https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design">OpenAI and Synopsys Announce GPT-Synopsys: Frontier ...</a></li>
+<li><a href="https://openai.com/index/advancing-chip-design-with-our-models/">Advancing chip design with OpenAI models</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI for chip design`, `#OpenAI`, `#AMD`, `#EDA`, `#hardware design`
 
 ---
 
 ## Financial News
 
 <a id="item-finance-news-1"></a>
-### [Fed October minutes signal further rate hikes and AI inflation risk](https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html) ⭐️ 8.0/10
+### [Fed minutes signal more rate hikes, flag AI inflation risk](https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html) ⭐️ 9.0/10
 
-Minutes from the Federal Reserve&\#x27;s October meeting showed almost all officials judged further rate increases would likely be appropriate to return inflation to 2%, while the FOMC voted 10-2 to hold its benchmark rate at 3.75%-4%. Officials also flagged AI-related demand and opaque financing as material inflation and financial-instability concerns.
+Federal Reserve meeting minutes released Wednesday showed “almost all” officials judged further rate increases would likely be appropriate to return inflation to 2%, after the FOMC voted 10-2 to hold its benchmark rate at 3.75%-4% in October. The minutes cited AI-related demand as a “material source of inflation risk,” while markets were fully pricing a quarter-point increase at the Dec. 8-9 meeting, according to CME Group’s FedWatch.
 
 rss · CNBC Finance · Nov 18, 19:41
 
-**「Background」** Since the meeting, October CPI rose 0.4% overall and 0.3% excluding food and energy, each 0.1 percentage point above expectations and well above the Fed&\#x27;s 2% target.
+**「Background」** The federal funds rate is the Fed’s main tool for steering inflation toward its 2% target; since the October meeting, October CPI rose 0.4% overall and 0.3% excluding food and energy, each 0.1 percentage point above expectations.
 
-**Tags**: `#Federal Reserve`, `#monetary policy`, `#inflation`, `#artificial intelligence`, `#financial stability`
+**「Impact」** A December quarter-point increase would raise borrowing costs tied to the federal funds rate, affecting households and businesses with variable-rate loans.
+
+**Tags**: `#Federal Reserve`, `#monetary policy`, `#interest rates`, `#inflation`, `#AI financial risk`
 
 ---
 
 <a id="item-finance-news-2"></a>
-### [Tencent Q3 2026: revenue misses estimates as capex jumps](https://api3.cls.cn/share/article/2537922?os=android&amp;amp;sv=8.8.5&amp;amp;app=cailianpress&amp;amp;selected=) ⭐️ 7.0/10
+### [Fed Governor Waller says half-point December hike may be needed to &\#x27;shock people&\#x27;](https://www.cnbc.com/2026/11/18/federal-reserve-governor-christopher-waller.html) ⭐️ 8.0/10
 
-Tencent’s 2026 third-quarter revenue rose 8% year on year to 207.3 billion yuan, missing market expectations, while capital expenditure reached 81.433 billion yuan—well above the 55.4 billion yuan consensus estimate—and free cash flow was negative 69.1 billion yuan. The company also said its WorkBuddy product has the highest daily token usage among domestic large-language-model products, exceeding 100 trillion tokens a day, a company-disclosed milestone without an independent baseline.
+Federal Reserve Governor Christopher Waller said Wednesday the central bank may need a half-percentage-point rate hike at its Dec. 8-9 meeting to “shock people” and fight inflation that remains above its 2% target.
 
-telegram · zaihuapd · Nov 18, 09:20
+rss · CNBC Finance · Nov 18, 15:13
 
-**「Background」** WorkBuddy is an AI-agent office tool from Tencent Cloud’s code-assistant unit; tokens are the units of text that language models process, so daily token counts measure usage. Tencent’s filing attributed the quarter’s negative free cash flow to 65.1 billion yuan of capital-expenditure payments outweighing 2.6 billion yuan in net operating cash.
+**「Background」** The Fed cut rates three times in 2025 before raising them by a quarter point in September and holding steady in October; the FOMC, not individual governors, decides rate changes.
 
-**「Who is affected」** The burden falls mainly on Tencent shareholders: Bloomberg reported that the company&\#x27;s AI spending has begun to stall profit growth, as margins are sacrificed to fund a buildout with no clear immediate returns.
+**「Impact」** A half-point move would exceed the quarter-point December hike that futures markets fully price, raising borrowing costs more for households and businesses than investors currently expect.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://finance.eastmoney.com/a/202611183934001422.html">腾 讯 控股 第 三 季 度 营 收 2073 亿 元 同比增长8% _ 东方 财 富网</a></li>
-<li><a href="https://www.workbuddy.cn/">WorkBuddy - AI Agent 办公新范式</a></li>
-<li><a href="https://www.bloomberg.com/news/articles/2026-11-18/tencent-s-sales-miss-estimates-in-setback-for-founder-s-ai-push">Tencent ’s Profit Squeeze Exposes China’s AI Spending... - Bloomberg</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#Tencent`, `#earnings`, `#AI capex`, `#free cash flow`, `#token usage`
+**Tags**: `#Federal Reserve`, `#monetary policy`, `#interest rates`, `#inflation`, `#FOMC`
 
 ---
